@@ -1,0 +1,218 @@
+@charset "UTF-8";
+i {
+  margin-right: 10px;
+}
+
+/*----------multi-level-accordian-menu------------*/
+.navbar-logo {
+  padding: 15px;
+  color: #ffffff;
+}
+
+.navbar-mainbg {
+  padding: 0;
+  background-color: #85b0ff;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+}
+
+.menu-toggle {
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  background-color: #85b0ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.125s ease;
+}
+.menu-toggle.clicked {
+  outline: 0;
+  background-color: #85b0ff;
+}
+.menu-toggle.clicked span {
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+.menu-toggle.clicked span:before {
+  background-color: #ffffff;
+  transform: rotate(90deg) translate(-1rem);
+}
+.menu-toggle.clicked span:after {
+  background-color: #ffffff;
+  transform: rotate(90deg) translate(1rem);
+  opacity: 0;
+}
+.menu-toggle span {
+  display: block;
+  width: 2.55rem;
+  height: 0.275rem;
+  border-radius: 99em;
+  background-color: #ffffff;
+  transition: 0.5s ease;
+  position: relative;
+}
+.menu-toggle span:before, .menu-toggle span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 99em;
+  transition: 0.5s ease;
+}
+.menu-toggle span:before {
+  top: 1rem;
+}
+.menu-toggle span:after {
+  bottom: 1rem;
+}
+
+:focus {
+  outline: 0;
+}
+
+#navbarSupportedContent {
+  overflow: hidden;
+  position: relative;
+}
+#navbarSupportedContent ul {
+  margin: 0;
+  padding: 0;
+}
+#navbarSupportedContent ul li {
+  float: left;
+  list-style-type: none;
+}
+#navbarSupportedContent ul li a {
+  display: block;
+  position: relative;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.712);
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#navbarSupportedContent ul li a i {
+  margin-right: 10px;
+}
+
+#navbarSupportedContent > ul > li > a.router-link-active {
+  background-color: transparent;
+  color: #85b0ff;
+  font-weight: 600;
+  transition: all 0.7s;
+}
+
+#navbarSupportedContent a:not(:only-child):after {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 14px;
+  content: "";
+  transition: 0.5s;
+}
+
+#navbarSupportedContent .router-link-active > a:not(:only-child):after {
+  transform: rotate(90deg);
+}
+
+.hori-selector {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 100%;
+  background-color: #fff;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hori-selector .right,
+.hori-selector .left {
+  position: absolute;
+  bottom: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+}
+
+.hori-selector .right {
+  right: -25px;
+}
+
+.hori-selector .left {
+  left: -25px;
+}
+
+.hori-selector .right:before,
+.hori-selector .left:before {
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #85b0ff;
+  content: "";
+}
+
+.hori-selector .right:before {
+  right: -25px;
+  bottom: 0;
+}
+
+.hori-selector .left:before {
+  left: -25px;
+  bottom: 0;
+}
+
+@media (max-width: 991px) {
+  #navbarSupportedContent ul li a {
+    padding: 12px 30px;
+  }
+
+  .hori-selector {
+    margin-left: 10px;
+    margin-top: 0;
+    border-radius: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+
+  .hori-selector .left,
+.hori-selector .right {
+    right: 10px;
+  }
+
+  .hori-selector .left {
+    left: auto;
+    top: -25px;
+  }
+
+  .hori-selector .right {
+    bottom: -25px;
+  }
+
+  .hori-selector .left:before {
+    left: -25px;
+    top: -25px;
+  }
+
+  .hori-selector .right:before {
+    left: -25px;
+    bottom: -25px;
+  }
+}
