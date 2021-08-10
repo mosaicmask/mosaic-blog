@@ -4,10 +4,7 @@
 -->
 <template>
   <Welcome v-if="showWelcome" />
-  <div
-    v-else
-    class="home-body"
-  >
+  <div v-else class="home-body">
     <!-- 自我介绍板块开始 -->
     <section>
       <div class="introduction">
@@ -23,41 +20,22 @@
           <svg class="gegga">
             <defs>
               <filter id="gegga">
-                <feGaussianBlur
-                  in="SourceGraphic"
-                  stdDeviation="7"
-                  result="blur"
-                />
+                <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
                 <feColorMatrix
                   in="blur"
                   mode="matrix"
                   values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -10"
                   result="inreGegga"
                 />
-                <feComposite
-                  in="SourceGraphic"
-                  in2="inreGegga"
-                  operator="atop"
-                />
+                <feComposite in="SourceGraphic" in2="inreGegga" operator="atop" />
               </filter>
             </defs>
           </svg>
-          <svg
-            class="snurra"
-            width="200"
-            height="200"
-            viewBox="0 0 200 200"
-          >
+          <svg class="snurra" width="200" height="200" viewBox="0 0 200 200">
             <defs>
               <linearGradient id="linjärGradient">
-                <stop
-                  class="stopp1"
-                  offset="0"
-                />
-                <stop
-                  class="stopp2"
-                  offset="1"
-                />
+                <stop class="stopp1" offset="0" />
+                <stop class="stopp2" offset="1" />
               </linearGradient>
               <linearGradient
                 y2="160"
@@ -73,43 +51,20 @@
               class="halvan"
               d="m 164,100 c 0,-35.346224 -28.65378,-64 -64,-64 -35.346224,0 -64,28.653776 -64,64 0,35.34622 28.653776,64 64,64 35.34622,0 64,-26.21502 64,-64 0,-37.784981 -26.92058,-64 -64,-64 -37.079421,0 -65.267479,26.922736 -64,64 1.267479,37.07726 26.703171,65.05317 64,64 37.29683,-1.05317 64,-64 64,-64"
             />
-            <circle
-              class="strecken"
-              cx="100"
-              cy="100"
-              r="64"
-            />
+            <circle class="strecken" cx="100" cy="100" r="64" />
           </svg>
-          <svg
-            class="skugga"
-            width="200"
-            height="200"
-            viewBox="0 0 200 200"
-          >
+          <svg class="skugga" width="200" height="200" viewBox="0 0 200 200">
             <path
               class="halvan"
               d="m 164,100 c 0,-35.346224 -28.65378,-64 -64,-64 -35.346224,0 -64,28.653776 -64,64 0,35.34622 28.653776,64 64,64 35.34622,0 64,-26.21502 64,-64 0,-37.784981 -26.92058,-64 -64,-64 -37.079421,0 -65.267479,26.922736 -64,64 1.267479,37.07726 26.703171,65.05317 64,64 37.29683,-1.05317 64,-64 64,-64"
             />
-            <circle
-              class="strecken"
-              cx="100"
-              cy="100"
-              r="64"
-            />
+            <circle class="strecken" cx="100" cy="100" r="64" />
           </svg>
         </div>
       </div>
       <div class="custom-shape-divider-bottom-1617344671">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M1200 0L0 0 598.97 114.72 1200 0z"
-            class="shape-fill"
-          ></path>
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
         </svg>
       </div>
     </section>
@@ -120,33 +75,23 @@
       <div class="skills">
         <div class="title-box">
           <span>掌握的技能</span>
-          <span>在学习专业知识的同时，发展摄影爱好也成为了我的次要目标，因此在掌握专业技能的同时，也能汲取到图形处理的知识</span>
+          <span
+            >在学习专业知识的同时，发展摄影爱好也成为了我的次要目标，因此在掌握专业技能的同时，也能汲取到图形处理的知识</span
+          >
         </div>
         <div class="skill-body">
           <ul>
-            <li
-              v-for="item in skills"
-              :key="item.text"
-              class="skill-box"
-            >
+            <li v-for="item in skills" :key="item.text" class="skill-box">
               <svg class="icon">
                 <use :xlink:href="item.iconName"></use>
               </svg>
-              <span>{{item.text}}</span>
+              <span>{{ item.text }}</span>
             </li>
           </ul>
         </div>
         <div class="custom-shape-divider-bottom-1617759839">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M649.97 0L550.03 0 599.91 54.12 649.97 0z"
-              class="shape-fill"
-            ></path>
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
           </svg>
         </div>
       </div>
@@ -158,28 +103,21 @@
       <div class="myLike">
         <div class="title-box">
           <span>兴趣爱好</span>
-          <span>提高时间利用和工作效率，给你全新的能量和激情，让你在接下来的活动中精力充沛，激发创新思维，兴趣爱好带来的好处无穷无尽</span>
+          <span
+            >提高时间利用和工作效率，给你全新的能量和激情，让你在接下来的活动中精力充沛，激发创新思维，兴趣爱好带来的好处无穷无尽</span
+          >
         </div>
         <div class="like-body">
           <ul>
-            <li
-              class="like-box"
-              v-for="item in likes"
-              :key="item"
-            >
+            <li class="like-box" v-for="item in likes" :key="item">
               <div class="text-box">
-                <span>{{item}}</span>
+                <span>{{ item }}</span>
               </div>
             </li>
           </ul>
         </div>
         <div class="custom-shape-divider-bottom-1617681446">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path
               d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
               opacity=".25"
@@ -210,33 +148,21 @@
         <div class="projects-box">
           <ul class="options-list">
             <li
-              v-for="(item,index) in projects"
+              v-for="(item, index) in projects"
               :key="item"
-              :class="projectsFlg == index?'hover':''"
+              :class="projectsFlg == index ? 'hover' : ''"
               @mouseenter="changeProjectsTage(index)"
-            >{{item}}</li>
+            >
+              {{ item }}
+            </li>
           </ul>
         </div>
         <div class="img-box">
-          <img
-            v-for="item in projectsImgs"
-            :key="item"
-            :src="url + item"
-            class="card-img-top"
-            alt="..."
-          >
+          <img v-for="item in projectsImgs" :key="item" :src="url + item" class="card-img-top" alt="..." />
         </div>
         <div class="custom-shape-divider-bottom-1617759620">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M1200 0L0 0 892.25 114.72 1200 0z"
-              class="shape-fill"
-            ></path>
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
           </svg>
         </div>
       </div>
@@ -251,27 +177,15 @@
           <span>学习中的新知识点，工作中遇到的问题，记下来，记下来，记下来</span>
         </div>
         <div class="notes-box">
-          <div
-            class="card"
-            style="width: 18rem;"
-            v-for="item in 6"
-            :key="item"
-          >
+          <div class="card" style="width: 18rem" v-for="item in 6" :key="item">
             <div class="card-body">
               <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <router-link
-                to="/photography"
-                class="notes-btn btn btn-1"
-              >
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <router-link to="/photography" class="notes-btn btn btn-1">
                 <svg>
-                  <rect
-                    x="0"
-                    y="0"
-                    fill="none"
-                    width="100%"
-                    height="100%"
-                  />
+                  <rect x="0" y="0" fill="none" width="100%" height="100%" />
                 </svg>
                 let's go
               </router-link>
@@ -279,16 +193,8 @@
           </div>
         </div>
         <div class="custom-shape-divider-bottom-1617779411">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z"
-              class="shape-fill"
-            ></path>
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
           </svg>
         </div>
       </div>
@@ -307,112 +213,88 @@
             <a
               href="http://www.flickr.com/photos/nataliedowne/2254117707/in/set-72157604232220981"
               class="large polaroid img1"
-            ><img
-                src="http://media.24ways.org/2009/14/img/volcanic.jpg"
-                alt=""
-              >This breathtaking volcanic lake is at Wai-O-Tapu Thermal Wonderland</a>
+              ><img src="http://media.24ways.org/2009/14/img/volcanic.jpg" alt="" />This breathtaking volcanic lake is
+              at Wai-O-Tapu Thermal Wonderland</a
+            >
             <a
               href="http://www.flickr.com/photos/nataliedowne/2254700486/in/set-72157604232220981/"
               class="large polaroid img2"
-            ><img
-                src="http://media.24ways.org/2009/14/img/waterfall.jpg"
-                alt=""
-              >This lovely waterfall was at Rotorua in Rainbow Springs</a>
+              ><img src="http://media.24ways.org/2009/14/img/waterfall.jpg" alt="" />This lovely waterfall was at
+              Rotorua in Rainbow Springs</a
+            >
             <a
               href="http://www.flickr.com/photos/nataliedowne/2254704566/in/set-72157604232220981/"
               class="small polaroid img3"
-            ><img
-                src="http://media.24ways.org/2009/14/img/leaf.jpg"
-                alt=""
-              >Ferntastic</a>
+              ><img src="http://media.24ways.org/2009/14/img/leaf.jpg" alt="" />Ferntastic</a
+            >
 
             <a
               href="http://www.flickr.com/photos/nataliedowne/2311404989/in/set-72157604232220981/"
               class="medium polaroid img4"
-            ><img
-                src="http://media.24ways.org/2009/14/img/whale.jpg"
-                alt=""
-              >At Kaikoura we went whale watching!</a>
+              ><img src="http://media.24ways.org/2009/14/img/whale.jpg" alt="" />At Kaikoura we went whale watching!</a
+            >
 
             <a
               href="http://www.flickr.com/photos/nataliedowne/2312219680/in/set-72157604232220981"
               class="small polaroid img5"
-            ><img
-                src="http://media.24ways.org/2009/14/img/seal.jpg"
-                alt=""
-              >Found this little cutie on a walk in New Zealand!</a>
+              ><img src="http://media.24ways.org/2009/14/img/seal.jpg" alt="" />Found this little cutie on a walk in New
+              Zealand!</a
+            >
 
             <a
               href="http://www.flickr.com/photos/nataliedowne/2254789880/in/set-72157604232220981/"
               class="medium polaroid img6"
-            ><img
-                src="http://media.24ways.org/2009/14/img/lake.jpg"
-                alt=""
-              >An amazing bubbling volcanic spring, a bit muddy</a>
+              ><img src="http://media.24ways.org/2009/14/img/lake.jpg" alt="" />An amazing bubbling volcanic spring, a
+              bit muddy</a
+            >
 
             <a
               href="http://www.flickr.com/photos/nataliedowne/2341399904/in/set-72157604232220981/"
               class="medium polaroid img7"
-            ><img
-                src="http://media.24ways.org/2009/14/img/simon.jpg"
-                alt=""
-              >Simon in a giant Kiwi, pretending to be a Kiwi (the bird)</a>
+              ><img src="http://media.24ways.org/2009/14/img/simon.jpg" alt="" />Simon in a giant Kiwi, pretending to be
+              a Kiwi (the bird)</a
+            >
             <a
               href="http://www.flickr.com/photos/nataliedowne/2352603191/in/set-72157604232220981/"
               class="small polaroid img8"
-            ><img
-                src="http://media.24ways.org/2009/14/img/albatross.jpg"
-                alt=""
-              >Albatross in Dunedin</a>
+              ><img src="http://media.24ways.org/2009/14/img/albatross.jpg" alt="" />Albatross in Dunedin</a
+            >
             <a
               href="http://www.flickr.com/photos/nataliedowne/2340993237/in/set-72157604232220981/"
               class="medium polaroid img9"
-            ><img
-                src="http://media.24ways.org/2009/14/img/raft.jpg"
-                alt=""
-              >White water rafting in Queenstown</a>
+              ><img src="http://media.24ways.org/2009/14/img/raft.jpg" alt="" />White water rafting in Queenstown</a
+            >
             <a
               href="http://www.flickr.com/photos/nataliedowne/2306995686/in/set-72157604033893095/"
               class="large polaroid img10"
-            ><img
-                src="http://media.24ways.org/2009/14/img/whiteisland.jpg"
-                alt=""
-              >White Island</a>
+              ><img src="http://media.24ways.org/2009/14/img/whiteisland.jpg" alt="" />White Island</a
+            >
             <a
               href="http://www.flickr.com/photos/nataliedowne/2306989200/in/set-72157604033893095/"
               class="small polaroid img11"
-            ><img
-                src="http://media.24ways.org/2009/14/img/sulphur.jpg"
-                alt=""
-              >Sulphurous</a>
+              ><img src="http://media.24ways.org/2009/14/img/sulphur.jpg" alt="" />Sulphurous</a
+            >
             <a
               href="http://www.flickr.com/photos/nataliedowne/2352608953/in/set-72157604232220981/"
               class="small polaroid img12"
-            ><img
-                src="http://media.24ways.org/2009/14/img/sealions.jpg"
-                alt=""
-              >Sea lions!</a>
+              ><img src="http://media.24ways.org/2009/14/img/sealions.jpg" alt="" />Sea lions!</a
+            >
             <a
               href="http://www.flickr.com/photos/nataliedowne/2341816430/in/set-72157604232220981/"
               class="small polaroid img13"
-            ><img
-                src="http://media.24ways.org/2009/14/img/horses.jpg"
-                alt=""
-              >Horse riding</a>
+              ><img src="http://media.24ways.org/2009/14/img/horses.jpg" alt="" />Horse riding</a
+            >
             <a
               href="http://www.flickr.com/photos/nataliedowne/2352490411/in/set-72157604232220981/"
               class="small polaroid img14"
-            ><img
-                src="http://media.24ways.org/2009/14/img/camping.jpg"
-                alt=""
-              >Stewart Island</a>
+              ><img src="http://media.24ways.org/2009/14/img/camping.jpg" alt="" />Stewart Island</a
+            >
             <a
               href="http://www.flickr.com/photos/nataliedowne/2339184562/in/set-72157604232220981/"
               class="medium polaroid img15"
-            ><img
-                src="http://media.24ways.org/2009/14/img/us.jpg"
-                alt=""
-              >Us in a blue cave on the Franz Josef glacier</a>
+              ><img src="http://media.24ways.org/2009/14/img/us.jpg" alt="" />Us in a blue cave on the Franz Josef
+              glacier</a
+            >
           </div>
           <div class="custom-shape-divider-bottom-1617781801">
             <svg
@@ -441,49 +323,20 @@
         <div class="container">
           <div class="feedback">
             <div class="rating">
-              <input
-                type="radio"
-                name="rating"
-                id="rating-5"
-              >
+              <input type="radio" name="rating" id="rating-5" />
               <label for="rating-5"></label>
-              <input
-                type="radio"
-                name="rating"
-                id="rating-4"
-              >
+              <input type="radio" name="rating" id="rating-4" />
               <label for="rating-4"></label>
-              <input
-                type="radio"
-                name="rating"
-                id="rating-3"
-              >
+              <input type="radio" name="rating" id="rating-3" />
               <label for="rating-3"></label>
-              <input
-                type="radio"
-                name="rating"
-                id="rating-2"
-              >
+              <input type="radio" name="rating" id="rating-2" />
               <label for="rating-2"></label>
-              <input
-                type="radio"
-                name="rating"
-                id="rating-1"
-              >
+              <input type="radio" name="rating" id="rating-1" />
               <label for="rating-1"></label>
               <div class="emoji-wrapper">
                 <div class="emoji">
-                  <svg
-                    class="rating-0"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <circle
-                      cx="256"
-                      cy="256"
-                      r="256"
-                      fill="#ffd93b"
-                    />
+                  <svg class="rating-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <circle cx="256" cy="256" r="256" fill="#ffd93b" />
                     <path
                       d="M512 256c0 141.44-114.64 256-256 256-80.48 0-152.32-37.12-199.28-95.28 43.92 35.52 99.84 56.72 160.72 56.72 141.36 0 256-114.56 256-256 0-60.88-21.2-116.8-56.72-160.72C474.8 103.68 512 175.52 512 256z"
                       fill="#f4c534"
@@ -541,17 +394,8 @@
                       fill="#3e4347"
                     />
                   </svg>
-                  <svg
-                    class="rating-1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <circle
-                      cx="256"
-                      cy="256"
-                      r="256"
-                      fill="#ffd93b"
-                    />
+                  <svg class="rating-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <circle cx="256" cy="256" r="256" fill="#ffd93b" />
                     <path
                       d="M512 256A256 256 0 0 1 56.7 416.7a256 256 0 0 0 360-360c58.1 47 95.3 118.8 95.3 199.3z"
                       fill="#f4c534"
@@ -593,17 +437,8 @@
                       fill="#fff"
                     />
                   </svg>
-                  <svg
-                    class="rating-2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <circle
-                      cx="256"
-                      cy="256"
-                      r="256"
-                      fill="#ffd93b"
-                    />
+                  <svg class="rating-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <circle cx="256" cy="256" r="256" fill="#ffd93b" />
                     <path
                       d="M512 256A256 256 0 0 1 56.7 416.7a256 256 0 0 0 360-360c58.1 47 95.3 118.8 95.3 199.3z"
                       fill="#f4c534"
@@ -612,52 +447,17 @@
                       d="M336.6 403.2c-6.5 8-16 10-25.5 5.2a117.6 117.6 0 0 0-110.2 0c-9.4 4.9-19 3.3-25.6-4.6-6.5-7.7-4.7-21.1 8.4-28 45.1-24 99.5-24 144.6 0 13 7 14.8 19.7 8.3 27.4z"
                       fill="#3e4347"
                     />
-                    <path
-                      d="M276.6 244.3a79.3 79.3 0 1 1 158.8 0 79.5 79.5 0 1 1-158.8 0z"
-                      fill="#fff"
-                    />
-                    <circle
-                      cx="340"
-                      cy="260.4"
-                      r="36.2"
-                      fill="#3e4347"
-                    />
+                    <path d="M276.6 244.3a79.3 79.3 0 1 1 158.8 0 79.5 79.5 0 1 1-158.8 0z" fill="#fff" />
+                    <circle cx="340" cy="260.4" r="36.2" fill="#3e4347" />
                     <g fill="#fff">
-                      <ellipse
-                        transform="rotate(-135 326.4 246.6)"
-                        cx="326.4"
-                        cy="246.6"
-                        rx="6.5"
-                        ry="10"
-                      />
+                      <ellipse transform="rotate(-135 326.4 246.6)" cx="326.4" cy="246.6" rx="6.5" ry="10" />
                       <path d="M231.9 244.3a79.3 79.3 0 1 0-158.8 0 79.5 79.5 0 1 0 158.8 0z" />
                     </g>
-                    <circle
-                      cx="168.5"
-                      cy="260.4"
-                      r="36.2"
-                      fill="#3e4347"
-                    />
-                    <ellipse
-                      transform="rotate(-135 182.1 246.7)"
-                      cx="182.1"
-                      cy="246.7"
-                      rx="10"
-                      ry="6.5"
-                      fill="#fff"
-                    />
+                    <circle cx="168.5" cy="260.4" r="36.2" fill="#3e4347" />
+                    <ellipse transform="rotate(-135 182.1 246.7)" cx="182.1" cy="246.7" rx="10" ry="6.5" fill="#fff" />
                   </svg>
-                  <svg
-                    class="rating-3"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <circle
-                      cx="256"
-                      cy="256"
-                      r="256"
-                      fill="#ffd93b"
-                    />
+                  <svg class="rating-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <circle cx="256" cy="256" r="256" fill="#ffd93b" />
                     <path
                       d="M407.7 352.8a163.9 163.9 0 0 1-303.5 0c-2.3-5.5 1.5-12 7.5-13.2a780.8 780.8 0 0 1 288.4 0c6 1.2 9.9 7.7 7.6 13.2z"
                       fill="#3e4347"
@@ -667,43 +467,17 @@
                       fill="#f4c534"
                     />
                     <g fill="#fff">
-                      <path d="M115.3 339c18.2 29.6 75.1 32.8 143.1 32.8 67.1 0 124.2-3.2 143.2-31.6l-1.5-.6a780.6 780.6 0 0 0-284.8-.6z" />
-                      <ellipse
-                        cx="356.4"
-                        cy="205.3"
-                        rx="81.1"
-                        ry="81"
+                      <path
+                        d="M115.3 339c18.2 29.6 75.1 32.8 143.1 32.8 67.1 0 124.2-3.2 143.2-31.6l-1.5-.6a780.6 780.6 0 0 0-284.8-.6z"
                       />
+                      <ellipse cx="356.4" cy="205.3" rx="81.1" ry="81" />
                     </g>
-                    <ellipse
-                      cx="356.4"
-                      cy="205.3"
-                      rx="44.2"
-                      ry="44.2"
-                      fill="#3e4347"
-                    />
+                    <ellipse cx="356.4" cy="205.3" rx="44.2" ry="44.2" fill="#3e4347" />
                     <g fill="#fff">
-                      <ellipse
-                        transform="scale(-1) rotate(45 454 -906)"
-                        cx="375.3"
-                        cy="188.1"
-                        rx="12"
-                        ry="8.1"
-                      />
-                      <ellipse
-                        cx="155.6"
-                        cy="205.3"
-                        rx="81.1"
-                        ry="81"
-                      />
+                      <ellipse transform="scale(-1) rotate(45 454 -906)" cx="375.3" cy="188.1" rx="12" ry="8.1" />
+                      <ellipse cx="155.6" cy="205.3" rx="81.1" ry="81" />
                     </g>
-                    <ellipse
-                      cx="155.6"
-                      cy="205.3"
-                      rx="44.2"
-                      ry="44.2"
-                      fill="#3e4347"
-                    />
+                    <ellipse cx="155.6" cy="205.3" rx="44.2" ry="44.2" fill="#3e4347" />
                     <ellipse
                       transform="scale(-1) rotate(45 454 -421.3)"
                       cx="174.5"
@@ -713,17 +487,8 @@
                       fill="#fff"
                     />
                   </svg>
-                  <svg
-                    class="rating-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <circle
-                      cx="256"
-                      cy="256"
-                      r="256"
-                      fill="#ffd93b"
-                    />
+                  <svg class="rating-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <circle cx="256" cy="256" r="256" fill="#ffd93b" />
                     <path
                       d="M512 256A256 256 0 0 1 56.7 416.7a256 256 0 0 0 360-360c58.1 47 95.3 118.8 95.3 199.3z"
                       fill="#f4c534"
@@ -761,17 +526,9 @@
                       fill="#e24b4b"
                     />
                   </svg>
-                  <svg
-                    class="rating-5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
+                  <svg class="rating-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <g fill="#ffd93b">
-                      <circle
-                        cx="256"
-                        cy="256"
-                        r="256"
-                      />
+                      <circle cx="256" cy="256" r="256" />
                       <path d="M512 256A256 256 0 0 1 56.8 416.7a256 256 0 0 0 360-360c58 47 95.2 118.8 95.2 199.3z" />
                     </g>
                     <path
@@ -787,10 +544,14 @@
                       fill="#e84d88"
                     />
                     <g fill="#38c0dc">
-                      <path d="M95.2 114.9l-60 60v15.2l75.2-75.2zM123.3 114.9L35.1 203v23.2c0 1.8.3 3.7.7 5.4l116.8-116.7h-29.3z" />
+                      <path
+                        d="M95.2 114.9l-60 60v15.2l75.2-75.2zM123.3 114.9L35.1 203v23.2c0 1.8.3 3.7.7 5.4l116.8-116.7h-29.3z"
+                      />
                     </g>
                     <g fill="#d23f77">
-                      <path d="M373.3 114.9l-66 66V196l81.3-81.2zM401.5 114.9l-94.1 94v17.3c0 3.5.8 6.8 2.2 9.8l121.1-121.1h-29.2z" />
+                      <path
+                        d="M373.3 114.9l-66 66V196l81.3-81.2zM401.5 114.9l-94.1 94v17.3c0 3.5.8 6.8 2.2 9.8l121.1-121.1h-29.2z"
+                      />
                     </g>
                     <path
                       d="M329.5 395.2c0 44.7-33 81-73.4 81-40.7 0-73.5-36.3-73.5-81s32.8-81 73.5-81c40.5 0 73.4 36.3 73.4 81z"
@@ -819,12 +580,12 @@
 </template>
 
 <script lang="ts">
-import Welcome from '../components/welcome/welcome.vue';
-import Footer from '../components/Footer/Footer.vue';
+import Welcome from '../components/welcome/welcome.vue'
+import Footer from '../components/Footer/Footer.vue'
 
 // 常用的Composition API:defineComponent,ref,reactive,toRef,toRefs
 // defineComponent 函数目的是定义一个组件 内部可以传入一个配置对象
-import { defineComponent, ref, onMounted } from 'vue';
+import { defineComponent, ref, onMounted } from 'vue'
 
 export default defineComponent({
   name: 'Home',
@@ -868,42 +629,41 @@ export default defineComponent({
         ['cp1.jpg', 'cp2.jpg', 'cp3.jpg', 'cp4.jpg'],
       ],
       projectsFlg: 0,
-    };
+    }
   },
   setup() {
     // 判断是否首次加载
-    const showWelcome = ref(false);
+    const showWelcome = ref(false)
     onMounted(() => {
       // 根据是否存在会话缓存判断
-      let isFalst = sessionStorage.getItem('isFalst');
+      let isFalst = sessionStorage.getItem('isFalst')
       typeof isFalst === 'object'
         ? ((showWelcome.value = true), //更改状态
           sessionStorage.setItem('isFalst', 'not'), //存入缓存
           setTimeout(() => {
             //设置定时器结束欢迎动画
-            showWelcome.value = false;
+            showWelcome.value = false
           }, 7500))
-        : (showWelcome.value = false);
-    });
+        : (showWelcome.value = false)
+    })
     return {
       showWelcome,
-    };
+    }
   },
   created() {
-    this.changeProjectsTage(0);
+    this.changeProjectsTage(0)
   },
   methods: {
     //鼠标移入事件
     changeProjectsTage(index: number) {
-      if (index >= this.imgArr.length) return;
+      if (index >= this.imgArr.length) return
       // 更改显示图片
-      this.projectsImgs = [...this.imgArr[index]];
+      this.projectsImgs = [...this.imgArr[index]]
       // 更改选中项
-      this.projectsFlg = index;
+      this.projectsFlg = index
     },
   },
-});
+})
 </script>
 
-<style scoped src="../assets/css/out/home.css">
-</style>
+<style scoped src="../assets/css/out/home.css"></style>

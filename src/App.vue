@@ -7,13 +7,13 @@
   <router-view />
 </template>
 <script lang="ts">
-import Navbar from './components/Navbar/Navbar.vue';
-import { defineComponent, ref } from 'vue';
+import Navbar from './components/Navbar/Navbar.vue'
+import { defineComponent, ref } from 'vue'
 export default defineComponent({
   components: {
     Navbar,
   },
-});
+})
 </script>
 <style lang="scss">
 #app {
