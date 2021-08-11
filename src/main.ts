@@ -18,6 +18,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 //animate
 import 'animate.css'
+// createApp.prototype.$wow = WOW
 // iconfonts
 import './assets/js/iconfont.js'
 import './assets/css/iconfont.css'
